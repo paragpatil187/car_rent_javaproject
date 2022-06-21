@@ -1,10 +1,15 @@
 package rentcar;
 
+import java.util.ArrayList;
+
 public class RentRunner {
+	
+	static ArrayList<Customer> customerList = new ArrayList<Customer>();
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		Customer ramu = new Customer(1,"y","Ramu","Z",1);
+		ramu.add();
+		ramu.print();
 	}
 
 }
