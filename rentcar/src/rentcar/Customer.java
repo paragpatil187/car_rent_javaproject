@@ -48,7 +48,12 @@ public class Customer extends Person{
 
 	@Override
 	public void remove() {
-		// TODO Auto-generated method stub
+		ArrayList<Customer> customerList = RentRunner.customerList ;
+		for(int i=0;i<customerList.size();i++) {
+			if(customerList.get(i).id==this.id) {
+				customerList.remove(i);
+			}
+		}
 		
 	}
 
