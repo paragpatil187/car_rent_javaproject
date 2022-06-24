@@ -1,4 +1,6 @@
 package rentcar;
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class Customer extends Person{
@@ -35,8 +37,23 @@ public class Customer extends Person{
 		// TODO Auto-generated method stub
 		
 		ArrayList<Customer> customerList = RentRunner.customerList ;
-		
+		if(customerList.isEmpty()) {
+			this.id=1;
+		}
+		else {
+			int last_id=customerList.get(customerList.size()-1).id;
+			this.id=last_id;
+		}
 		customerList.add(this);
+		File file=new File("Customer.txt");
+		if(file.exists()== false) {
+			try {
+				file.createNewFile();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
 		
 	}
 
