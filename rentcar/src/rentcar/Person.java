@@ -13,6 +13,10 @@ public abstract class Person {
 		this.contact_no = contact_no;
 	}
 
+	public Person() {
+		// TODO Auto-generated constructor stub
+	}
+
 	public int getId() {
 		return id;
 	}
